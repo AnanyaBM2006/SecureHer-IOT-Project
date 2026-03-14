@@ -1,0 +1,107 @@
+Title: 
+
+IoT-Based Women’s Safety Emergency Alert System using ESP32
+
+2. Abstract
+
+Women’s safety has become a critical concern in many urban and rural areas. In emergency situations, 
+victims often require a fast and simple method to send alerts and share their location with authorities 
+or trusted contacts. This project presents an IoT-based Women’s Safety Emergency Alert System built using
+ the ESP32 microcontroller. The system uses a capacitive touch sensor as a trigger mechanism embedded in a 
+wearable device such as a necklace or bracelet. When the sensor is pressed, the ESP32 activates an emergency 
+alert, displays the status on a 16×2 LCD screen, and generates simulated GPS coordinates (latitude and longitude). 
+These coordinates represent the victim’s location and can be logged into a cloud platform such as Google Sheets for
+monitoring and tracking purposes. The prototype demonstrates how low-cost IoT hardware can be used to build a quick-response 
+safety system that can be expanded in the future to include real GPS modules, SMS alerts, and mobile notifications.
+
+
+3. Problem Statement
+
+In many emergency situations, women may not have sufficient time or ability to call for help using a mobile phone. 
+Traditional safety methods may require multiple steps, which can delay alert generation during critical moments. 
+There is a need for a simple, fast, and wearable safety device that allows a user to trigger an emergency alert instantly. 
+The system should be capable of generating location information and logging the event for further action. The challenge is to 
+design a low-cost IoT prototype that can quickly activate an alert and share location data when a trigger is pressed.
+
+
+4. Objectives
+
+
+• To design a wearable emergency alert system for women’s safety
+• To use a touch sensor as a quick and easy emergency trigger mechanism
+• To implement the system using an ESP32 microcontroller
+• To display alert messages on a 16×2 LCD display
+• To generate simulated GPS latitude and longitude values for location tracking
+• To log emergency alerts and location data into a cloud platform (Google Sheets)
+• To demonstrate a scalable IoT architecture for real-time safety monitoring
+
+
+5. Architecture Diagram
+
+Touch Sensor
+      ↓
+ESP32 Microcontroller
+      ↓
+Emergency Detection Logic
+      ↓
+16×2 LCD Display (SOS Alert)
+      ↓
+Random GPS Coordinate Generator
+      ↓
+Cloud Logging (Google Sheets)
+
+Wearable Device Layer
+↓
+Edge Processing (ESP32)
+↓
+Alert Display
+↓
+Cloud Data Logging
+
+
+7. Technologies Used
+
+Hardware
+• ESP32-C6 Microcontroller
+• Capacitive Touch Sensor (TTP223)
+• 16×2 LCD Display with I2C Module
+• Jumper Wires and Breadboard
+Software
+• Arduino IDE
+• Embedded C / Arduino Programming
+• I2C Communication Protocol
+• Random Number Generation for Simulated GPS Coordinates
+Cloud
+• Google Sheets for data logging
+• Google Apps Script / API integration (for future implementation)
+
+
+8. Implementation (Git)
+
+The system was implemented using Arduino-based embedded programming. The ESP32 microcontroller continuously 
+monitors the touch sensor input. When the sensor detects a touch event, the microcontroller triggers the emergency
+ alert logic. The LCD screen immediately displays an SOS alert message indicating that the emergency system has been 
+activated. Simultaneously, the system generates simulated GPS coordinates using a random number generation method to 
+represent a location. These coordinates are printed in the serial monitor and prepared for logging into a cloud database
+ such as Google Sheets. The implementation can be extended by integrating a real GPS module and automated cloud logging 
+through HTTP requests.
+
+
+9. Results / Output
+
+The prototype successfully demonstrates the functionality of the emergency alert system.
+When the touch sensor is pressed:
+• The ESP32 detects the trigger signal
+• The LCD screen displays an SOS emergency alert message
+• Random latitude and longitude coordinates are generated
+• The coordinates are displayed in the serial monitor
+• The system simulates sending location data for emergency tracking
+
+Example Output:
+SOS ACTIVATED
+Sending Alert
+
+Latitude: 12.973400
+Longitude: 77.586700
+
+ 
